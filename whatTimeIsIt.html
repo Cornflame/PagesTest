@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What Time is it?</title>
+</head>
+<body>
+
+	<h1>What Time is it?</h1>
+	<h2 id="time"></h2>
+
+
+	<script type="text/javascript">
+			
+		let time=document.querySelector('#time')
+
+		setInterval( () => {
+			let date=Date()
+			time.innerHTML=date
+		}, 1000)
+
+	</script>
+</body>
+</html>
