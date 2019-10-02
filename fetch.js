@@ -2,6 +2,7 @@ let url='https://api.wheretheiss.at/v1/satellites/25544'
 
 let issLat=document.querySelector('#iss-lat')
 let issLon=document.querySelector('#iss-lon')
+let lastUpdate=document.querySelector('#time')
 
 var issMarker
 var update=10000
@@ -28,6 +29,8 @@ function iss(attempts){
 	if(attempts<=0){
 		console.log('Too many errors, abandoning requests to get iss position.')
 	}
+
+	lastUpdate.innerHTML=Date()
 
 	fetch(url)
 		.then(res=>res.json())
